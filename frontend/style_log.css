@@ -1,0 +1,50 @@
+body{
+    background: cadetblue;
+}
+
+.dim{
+    padding-left: 500px;
+    padding-right: 500px;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    color: rgb(98, 98, 243);
+}
+
+.bout{
+    background: rgb(104, 104, 255);
+    border-radius: 50px;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: red;
+}
+.bien{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(14, 221, 221); 
+}
+.aa{
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+}
+
+.job{
+    background: rgb(0, 0, 0);
+    margin-left: 175px;
+    margin-right: 175px;
+    border-radius: 15px;
+}
+.job label{
+    color: white;
+}
+.job form{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.job form .b{
+    background-color: brown;
+    width: 150px;
+    border: 1px solid wheat;
+}
