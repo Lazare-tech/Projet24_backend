@@ -4,9 +4,9 @@
         <ul class="nav flex-column p-5">
 
             
-             <li class="nav-item">
+             <li class="nav-item pt-5">
                <a class="nav-link" href="dashboard.php">
-                 Home
+                 Utilisateurs
                </a>
              </li>
              
@@ -19,6 +19,11 @@
              <li class="nav-item">
                <a class="nav-link" href="view_entreprise.php">
                Entreprise
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="view_formation.php">
+               Formations
                </a>
              </li>
             

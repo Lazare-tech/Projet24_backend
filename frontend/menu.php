@@ -12,7 +12,7 @@ include("config/config.php");
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.php">HOME</a>
+                        <a class="nav-link " aria-current="page" href="./index.php">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#">SKILLS</a>
@@ -52,7 +52,7 @@ include("config/config.php");
     </button>
     <ul class="dropdown-menu">
       
-      <li><a class="dropdown-item" href="profile.php">Profile</a></li>
+      <li><a class="dropdown-item" href="../frontend/dashboard_aprenant/profile.php">Profile</a></li>
     
     </ul>
                 </div>

@@ -42,7 +42,7 @@
                             Register Here
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="register_form.php">Aprenant</a></li>
+                            <li><a class="dropdown-item" href="register_form_aprenant.php">Aprenant</a></li>
                             <li><a class="dropdown-item" href="register_entreprise_form.php">Entreprise</a></li>
                           
                         </ul>
@@ -58,39 +58,26 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 text-center mb-3">
-                    <h1 class="text-warning display-2">Skills</h1>
+                    <h1 class="text-warning display-2">Formations</h1>
                     <p class="text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, a.
                         Omnis, numquam!</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-10 text-center">
-                    <i class="fas fa-desktop fa-8x" style="color: #fcaf3e;"></i>
-                    <h1 class="text-secondary text-center">Development</h1>
-                    <p class="text-muted">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, possimus beatae. Architecto
-                        vel, amet excepturi nisi quidem aliquid facilis in.
-                    </p>
-                    <button type="button" class="btn btn-outline-warning ">Learn More</button>
-                </div><br>
-                <div class="col-lg-4 col-sm-10 text-center">
-                    <i class="far fa-edit fa-8x" style="color: #fcaf3e;"></i>
-                    <h1 class="text-secondary text-center">Design</h1>
-                    <p class="text-muted">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, possimus beatae. Architecto
-                        vel, amet excepturi nisi quidem aliquid facilis in.
-                    </p>
-                    <button type="button" class="btn btn-outline-warning ">Learn More</button>
-                </div><br>
-                <div class="col-lg-4 col-sm-10 text-center">
-                    <i class="fas fa-cogs fa-8x" style="color: #fcaf3e;"></i>
-                    <h1 class="text-secondary text-center">Creativity</h1>
-                    <p class="text-muted">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, possimus beatae. Architecto
-                        vel, amet excepturi nisi quidem aliquid facilis in.
-                    </p>
-                    <button type="button" class="btn btn-outline-warning ">Learn More</button>
+            <?php $req= $bdd->query("SELECT * FROM Formations");
+                while($donnees=$req->fetch()){
+            ?>  <div class="col-lg-4">
+                    <div class="card">
+                    <img src="images/<?php echo $donnees['photo'];?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $donnees['titre'];?></h5>
+                        <p class="card-text">
+                            <?php echo $donnees['description_formation'];?></p>
+                    </div>
+                    </div>
                 </div>
+              <?php }?>
+               
             </div>
         </div>
     </section>

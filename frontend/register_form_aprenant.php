@@ -39,7 +39,23 @@
                     <input type="text" id="form3Example2" class="form-control" name="nom_utilisateur" />
                     <label class="form-label" for="form3Example2">Nom utilisateur</label>
                   </div>
-               
+                  <!-- competence -->
+                  <!-- <div class="form-outline">
+                    <input type="text" id="form3Example2" class="form-control" name="competence" />
+                    <label class="form-label" for="form3Example2">competence</label>
+                  </div> -->
+                  <!-- description -->
+                  
+                  <!-- <div class="form-outline">
+                    <textarea class="form-control" rows="3" placeholder="Donnez une brev description " name="description"></textarea>
+
+                    <label class="form-label" for="form3Example2">Brev Description</label>
+                  </div>
+                  
+                  <div class="form-outline">
+                    <input type="file" id="form3Example1" class="form-control" name="photo" />
+                    <label class="form-label" for="form3Example1">Image Profile</label>
+                  </div> -->
 
 
               <!-- Email input -->
