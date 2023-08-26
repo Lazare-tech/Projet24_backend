@@ -23,7 +23,7 @@ $passe=password_hash($Mot_de_passe,PASSWORD_DEFAULT);
 // echo "Contact: $Contact <br>";
 
 
-$son = $bdd->query("SELECT roles FROM Roles WHERE roles = 'editeur' ");
+$son = $bdd->query("SELECT roles FROM Roles WHERE roles = 'aprenant' ");
 $son_son= $son->fetch();
 echo $son_son['roles'];
 $req = $bdd->prepare('INSERT INTO register(Nom,Prenom,nom_utilisateur,
