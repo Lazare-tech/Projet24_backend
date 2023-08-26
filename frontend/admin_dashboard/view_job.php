@@ -102,6 +102,7 @@ include("../config/config.php");
                     <td>
                         <p class="text-muted mb-0"><?php echo $donnees['description_job'];?></p>
                     </td>
+                    
                    
                   
                     <td>
@@ -121,20 +122,7 @@ include("../config/config.php");
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <?php 
-        $req=$bdd->query("SELECT * FROM entreprise");
-        // echo $donnees['id_entreprise'];
-            // $resultat= $req->fetchAll(PDO::FETCH_ASSOC);
-            // var_dump($resultat);
-                            //  echo $donnees['nom_entreprise'];
-                            while($resultat=$req->fetch()){
-                               if($resultat['id'] == $donnees['id_entreprise']){
-                               echo $resultat['id'];
-                              
-                            }
-                          }
-                     ?>
-      </div>
+      <!--  -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
