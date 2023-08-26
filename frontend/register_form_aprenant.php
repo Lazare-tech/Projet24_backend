@@ -78,7 +78,7 @@
 
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-2">
+              <button type="submit" class="btn btn-primary btn-block mb-2" name="submit">
                 Register
               </button>
 

@@ -59,7 +59,7 @@ include("../config/config.php");
                             <!-- <div class="row"> -->
                             <div class="mb-4">
                                 <div class="form-outline">
-                                    <input type="tex" id="form3Example1" class="form-control" name="Nom"
+                                    <input type="text" id="form3Example1" class="form-control" name="Nom"
                                         value=" <?php echo $resultat['nom_entreprise']?>" />
                                     <label class="form-label" for="form3Example1">Nom entreprise</label>
                                 </div>
@@ -76,7 +76,7 @@ include("../config/config.php");
                             </div>
                             <div class="mb-4">
                                 <div class="form-outline">
-                                    <input type="text" id="form3Example1" class="form-control" name="Email"
+                                    <input type="email" id="form3Example1" class="form-control" name="Email"
                                         value=" <?php echo $resultat['email']?>" />
                                     <label class="form-label" for="form3Example1">Email</label>
                                 </div>

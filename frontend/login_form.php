@@ -41,7 +41,7 @@
         </div>
       
         <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block">Se connecte</button>
+        <button type="submit" class="btn btn-primary btn-block" name="submit" >Se connecte</button>
       </form>
     
 </body>

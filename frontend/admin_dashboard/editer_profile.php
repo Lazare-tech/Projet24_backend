@@ -59,7 +59,7 @@ include("../config/config.php");
                             <!-- <div class="row"> -->
                             <div class="mb-4">
                                 <div class="form-outline">
-                                    <input type="tex" id="form3Example1" class="form-control" name="Nom"
+                                    <input type="text" id="form3Example1" class="form-control" name="Nom"
                                         value=" <?php echo $resultat['Nom']?>" />
                                     <label class="form-label" for="form3Example1">Nom</label>
                                 </div>
@@ -98,13 +98,13 @@ include("../config/config.php");
 
                             <!-- Checkbox -->
 
-                            <button  class="btn btn-primary btn-block mb-4" name="editer">
+                            <button type="submit" class="btn btn-primary btn-block mb-4" name="submit">
                                 Enregister
                             </button>
 
                             <?php 
                             
-                            if(isset($_POST['editer'])){ 
+                            if(isset($_POST['submit'])){ 
                                 $Nom=$_POST['Nom'];
                                 $Prenom=$_POST['Prenom']; 
                                 $nom_utilisateur=$_POST['nom_utilisateur'];

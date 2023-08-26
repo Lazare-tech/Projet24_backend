@@ -23,7 +23,7 @@ include("../config/config.php");
     <!-- Custom styles for this template -->
     <link href="../bootstrap/dashboard.css" rel="stylesheet">
   
-    <title>Document</title>
+    <title>Profile utilisateur</title>
 </head>
 
 <body>
@@ -94,7 +94,7 @@ include("../config/config.php");
                   
                     
                     <td>
-                        <a href="./././././dashboard_aprenant/editer_profile_aprenant_form.php?id= <?php echo $donnees['id'];?>"><button type="button" class="btn btn-primary">
+                        <a href="editer_profile_aprenant_form.php?id= <?php echo $donnees['id'];?>"><button type="button" class="btn btn-primary">
                            Edit
                         </button>
                         </a>

@@ -52,8 +52,8 @@ include("../config/config.php");
             <table class="table table-striped table-sm">
             <thead class="bg-light">
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
                     <th>Nom Utilisateur</th>
                     <th>Email</th>
                     <th>Contact</th>

@@ -10,7 +10,7 @@ include("../config/config.php");
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,16 +18,26 @@ include("../config/config.php");
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
         
-        <link href="bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap.min.css" rel="stylesheet"> -->
+        <title>Edition profile</title>
+    <link href="../style.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/dashboard.css" rel="stylesheet">
+ 
 
 <!-- Custom styles for this template -->
 <link href="dashboard.css" rel="stylesheet">
   </head>
 
   <body>
-   <?php include("../menu.php")?>
+   <?php include("bare_laterale.php")?>
 
-
+   <div class="container-fluid">
+      <?php include("vertical_menu.php")?>
  <?php $id_champ=$_SESSION['id'];
     if(isset($_GET['id'])){
         $id_champ= $_GET['id'];
@@ -42,7 +52,6 @@ include("../config/config.php");
     //..........................................
 }
 ?>
-<section class="background-radial-gradient overflow-hidden container">
     <div class="container   px-md-5 text-center text-lg-start my-5 edition_profile">
         <div class="row gx-lg-5 align-items-center mb-5">
 
@@ -57,7 +66,7 @@ include("../config/config.php");
                             <!-- <div class="row"> -->
                             <div class="mb-4">
                                 <div class="form-outline">
-                                    <input type="tex" id="form3Example1" class="form-control" name="Nom"
+                                    <input type="text" id="form3Example1" class="form-control" name="Nom"
                                         value=" <?php echo $resultat['Nom']?>" />
                                     <label class="form-label" for="form3Example1">Nom </label>
                                 </div>
@@ -65,20 +74,16 @@ include("../config/config.php");
                             
                             <div class="mb-4">
                                 <div class="form-outline">
-                                        <textarea class="form-control" rows="3" name="Prenom">
-                                        <?php echo $resultat['Prenom']?> 
-                                    </textarea>
-
-                                    <label class="form-label" for="form3Example2">Prenom</label>
+                                    <input type="text" id="form3Example1" class="form-control" name="Prenom"
+                                        value=" <?php echo $resultat['Prenom']?>" />
+                                    <label class="form-label" for="form3Example1">Prenom </label>
                                 </div>
                             </div>
                             <div class="mb-4">
                                 <div class="form-outline">
-                                        <textarea class="form-control" rows="3" name="nom_utilisateur">
-                                        <?php echo $resultat['nom_utilisateur']?> 
-                                    </textarea>
-
-                                    <label class="form-label" for="form3Example2">Nom utilisateur</label>
+                                    <input type="text" id="form3Example1" class="form-control" name="nom_utilisateur"
+                                        value=" <?php echo $resultat['nom_utilisateur']?>" />
+                                    <label class="form-label" for="form3Example1">Nom </label>
                                 </div>
                             </div>
                             <div class="mb-4">
@@ -100,13 +105,13 @@ include("../config/config.php");
 
                             <!-- Checkbox -->
 
-                            <button  class="btn btn-primary btn-block mb-4" name="editer">
+                            <button type="submit" class="btn btn-primary btn-block mb-4" name="submit">
                                 Enregister
                             </button>
 
                             <?php 
                             
-                            if(isset($_POST['editer'])){ 
+                            if(isset($_POST['submit'])){ 
                                 $Nom=$_POST['Nom'];
                                 $Prenom=$_POST['Prenom']; 
                                 $nom_utilisateur=$_POST['nom_utilisateur']; 
@@ -143,6 +148,6 @@ include("../config/config.php");
                         </div>
                         </div>
     </div>
-</section>
+                        </div>
 </body>
 </html>
