@@ -21,6 +21,8 @@ include("../config/config.php");
         <link href="bootstrap.min.css" rel="stylesheet"> -->
         <title>Edition profile</title>
     <link href="../style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +85,7 @@ include("../config/config.php");
                                 <div class="form-outline">
                                     <input type="text" id="form3Example1" class="form-control" name="nom_utilisateur"
                                         value=" <?php echo $resultat['nom_utilisateur']?>" />
-                                    <label class="form-label" for="form3Example1">Nom </label>
+                                    <label class="form-label" for="form3Example1">Nom utilisateur</label>
                                 </div>
                             </div>
                             <div class="mb-4">
@@ -98,6 +100,57 @@ include("../config/config.php");
                                     <input type="text" id="form3Example1" class="form-control" name="Contact"
                                         value=" <?php echo $resultat['Contact']?>" />
                                     <label class="form-label" for="form3Example1">Contact</label>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                            <select class="form-select" aria-label="Default select example" name="formation">
+                   
+                   <option selected><?php echo $resultat['formation']?></option>
+                   <?php 
+                     $formation=$bdd->query("SELECT * FROM FFormations");
+                     while($donnees=$formation->fetch()){?>
+                       <option>
+                           <?php echo $donnees['nom_formation'];?>
+                       </option>
+
+                    <?php }?>
+                   
+                   
+                 </select>
+                 <label class="form-label" for="form3Example1">Formations</label>
+
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-outline">
+                                <select class="form-select" aria-label="Default select example" name="ville">
+                      <option selected><?php echo $resultat['ville']?></option>
+                      <?php 
+                        $ville=$bdd->query("SELECT * FROM Ville");
+                        while($donnees=$ville->fetch()){?>
+                          <option>
+                              <?php echo $donnees['nom_ville'];?>
+                          </option>
+
+                       <?php }?>
+                    </select>
+                    <label class="form-label" for="form3Example1">Ville</label>
+
+                    <select class="form-select" aria-label="Default select example" name="promotion">
+                      <option selected><?php echo $resultat['promotion'];?></option>
+                      <?php 
+                        $promotion=$bdd->query("SELECT * FROM Promotions");
+                        while($donnees=$promotion->fetch()){?>
+                          <option>
+                              <?php echo $donnees['date'];?>
+                          </option>
+
+                       <?php }?>
+                    </select>
+                    <label class="form-label" for="form3Example1">Promotions</label>
+
+                                
+
+                                  
                                 </div>
                             </div>
                            
@@ -119,9 +172,12 @@ include("../config/config.php");
                                 $Email= $_POST['Email'];
                                 // $photo= $_POST['photo'];
                                 $Contact= $_POST['Contact'];
+                                $formation =$_POST['formation'];
+                                $promotion = $_POST['promotion'];
+                                $ville = $_POST['ville'];
 
                                 $id=$id_champ;
-                                $sql="UPDATE `register` SET `Nom`='$Nom',`Prenom`='$Prenom',`nom_utilisateur`='$nom_utilisateur', `Email`='$Email' ,`Contact`='$Contact' WHERE `id`='$id' ";
+                                $sql="UPDATE `register` SET `Nom`='$Nom',`Prenom`='$Prenom',`nom_utilisateur`='$nom_utilisateur', `Email`='$Email' ,`Contact`='$Contact',`formation`='$formation', `ville`='$ville', `promotion`='$promotion' WHERE `id`='$id' ";
                                   // $edit_update=$bdd->query("UPDATE Register SET firstname= $firstname ,lastname=
                                  // $lastname ,username= $username ,email= $email ,role_name= $role_name WHERE id= $id");
                                  $result= $bdd->query($sql);

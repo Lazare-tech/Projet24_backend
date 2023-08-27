@@ -1,12 +1,12 @@
 <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
-            <ul class="nav flex-column ">
+            <ul class="nav flex-column pt-5">
              
             
-              <li class="nav-item p-5">
-                <a class="nav-link" href="dashboar.php">
-                  <span data-feather="file"></span>
+              <li class="nav-item pt-5">
+                <a class="nav-link" href="../entreprise_dashboard/dashboar.php">
+                  Profile entreprise
                 </a>
               </li>
              

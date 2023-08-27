@@ -16,7 +16,8 @@ include("../config/config.php");
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
          -->
-   
+         <link href="../style.css" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -59,6 +60,10 @@ include("../config/config.php");
                     <th>Nom Utilisateur</th>
                     <th>Email</th>
                     <th>Contact</th>
+                    <th>Formations</th>
+                    <th>Ville</th>
+                    <th>Promotions</th>
+
                     <th>ImageProfile</th>
                     <th>Actions</th>
 
@@ -89,7 +94,16 @@ include("../config/config.php");
                         <p class="text-muted mb-0"><?php echo $donnees['Contact']?></p>
                     </td>
                     <td>
-                        <p class="text-muted mb-0"><?php echo $donnees['photo']?></p>
+                        <p class="text-muted mb-0"><?php echo $donnees['formation']?></p>
+                    </td>
+                    <td>
+                        <p class="text-muted mb-0"><?php echo $donnees['ville']?></p>
+                    </td>
+                    <td>
+                        <p class="text-muted mb-0"><?php echo $donnees['promotion']?></p>
+                    </td>
+                    <td>
+                        <p class="text-muted mb-0"><img src="../images/<?php echo $donnees['photo'];?>" class="image_ronde"></p>
                     </td>
                   
                     

@@ -3,7 +3,7 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column ">
               <li class="nav-item pt-5">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="profile.php">
                   <span data-feather="shopping-cart"></span>
                   Profile Aprenant
                 </a>

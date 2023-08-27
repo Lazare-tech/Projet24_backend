@@ -14,7 +14,10 @@ $Email = $_POST["Email"];
 $nom_utilisateur= $_POST['nom_utilisateur'];
 $Mot_de_passe = $_POST["Mot_de_passe"];
 $Contact = $_POST["Contact"];
-
+$formation = $_POST['formation'];
+$promotion = $_POST['promotion'];
+$ville = $_POST['ville'];
+$photo = $_POST['photo'];
 // echo "Nom: $Nom <br>";
 // echo "Prenom: $Prenom <br>";
 // echo "Email: $Email <br>";
@@ -49,7 +52,11 @@ if(isset($_POST['submit'])) {
       OR empty($_POST['nom_utilisateur'])
        OR empty($_POST['Email']) 
        OR empty($_POST['Contact']) 
-       OR empty($_POST['Mot_de_passe'])) {
+       OR empty($_POST['Mot_de_passe'])
+      OR empty($_POST['formation'])
+      OR empty($_POST['promotion'])
+      OR empty($_POST['ville'])
+      OR empty($_POST['photo'])) {
          
     echo "<script>alert('some inputs are empty');</script>";
   } else {
@@ -60,7 +67,7 @@ if(isset($_POST['submit'])) {
     $passe=password_hash($_POST['Mot_de_passe'],PASSWORD_DEFAULT);
 
     $insert = $bdd->prepare("INSERT INTO register(Nom,Prenom,nom_utilisateur,
-     Email, Mot_de_passe, Contact, role_utilisateur) VALUES(:Nom, :Prenom, :nom_utilisateur, :Email, :passe, :Contact, :role_utilisateur)");
+     Email, Mot_de_passe, Contact, role_utilisateur,formation,ville,promotion,photo) VALUES(:Nom, :Prenom, :nom_utilisateur, :Email, :passe, :Contact, :role_utilisateur, :formation, :ville, :promotion, :photo)");
     
 
     $insert->execute([
@@ -75,10 +82,14 @@ if(isset($_POST['submit'])) {
 ':passe' => $passe,
 ':Contact' => $Contact,
 ':role_utilisateur' => $son_son['roles'],
+':formation' => $formation,
+':ville' => $ville,
+':promotion' => $promotion,
+':photo' => $photo,
     
     ]);
     
-    header("location: login.php");
+    header("location:login_form.php");
 
 
   }

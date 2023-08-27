@@ -97,9 +97,7 @@ include("../config/config.php");
                                 $photo= $_POST['photo'];
                                 $id=$id_champ;
                                 $sql="UPDATE `Formations` SET `titre`='$titre',`description_formation`='$description',`photo`='$photo' WHERE `id`='$id' ";
-                                 ; // $edit_update=$bdd->query("UPDATE Register SET firstname= $firstname ,lastname=
-                                 // $lastname ,username= $username ,email= $email ,role_name= $role_name WHERE id= $id");
-                                 $result= $bdd->query($sql);
+                                  $result= $bdd->query($sql);
                                 if($result)
                                 {
                                      var_dump($result);

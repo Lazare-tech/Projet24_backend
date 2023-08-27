@@ -78,34 +78,52 @@
                 <!-- competence -->
                 <div class="row">
                   <div class="col-md-6 mb-3">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="formation">
+                   
                       <option selected>Formation</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <?php 
+                        $formation=$bdd->query("SELECT * FROM FFormations");
+                        while($donnees=$formation->fetch()){?>
+                          <option>
+                              <?php echo $donnees['nom_formation'];?>
+                          </option>
+
+                       <?php }?>
+                      
+                      
                     </select>
                   </div>
                   <div class="col-md-6">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="promotion">
                       <option selected>Promotion</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <?php 
+                        $promotion=$bdd->query("SELECT * FROM Promotions");
+                        while($donnees=$promotion->fetch()){?>
+                          <option>
+                              <?php echo $donnees['date'];?>
+                          </option>
+
+                       <?php }?>
                     </select>
                   </div>
                 </div>
                 <div class="row mt-1">
                   <div class="col-md-6">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="ville">
                       <option selected>Ville</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <?php 
+                        $ville=$bdd->query("SELECT * FROM Ville");
+                        while($donnees=$ville->fetch()){?>
+                          <option>
+                              <?php echo $donnees['nom_ville'];?>
+                          </option>
+
+                       <?php }?>
                     </select>
                   </div>
                   <div class="col-md-6">
                     <div class="form-outline mb-2">
-                      <input type="file" id="form3Example4" class="form-control" name="file" />
+                      <input type="file" id="form3Example4" class="form-control" name="photo" />
                       <label class="form-label" for="form3Example4">Image</label>
                     </div>
                   </div>
@@ -119,10 +137,11 @@
             <button type="submit" class="btn btn-primary btn-block mb-2" name="submit">
               Register
             </button>
+            <a href="index.php" class="btn btn-outline-info">Retour</a>
 
 
             <!-- Register buttons -->
-            <div class="text-center">
+            <div class="text-center mb-1">
               <p>or sign up with:</p>
               <button type="button" class="btn btn-link btn-floating mx-1">
                 <i class="fab fa-facebook-f"></i>
@@ -141,7 +160,6 @@
               </button>
             </div>
             </form>
-            <a href="index.php" class="btn btn-outline-info">Retour</a>
           </div>
         </div>
       </div>
